@@ -16,20 +16,21 @@ namespace DigitalRoot
         }
         static void DigitalRoot(string rootThis)
         {
-             
-             
             
-
                 Console.WriteLine("Please enter any positive integer up to 17 digits: ");
                 Console.WriteLine();
+
                 rootThis = Console.ReadLine();
+
                 long number = 0;
                 bool isANumber = long.TryParse(rootThis, out number);
+
                 Console.WriteLine();
-            if(isANumber == true && rootThis.Length < 18 && !rootThis.Contains("-."))
-            {
-                long total = 0;
-               
+
+                if (isANumber == true && rootThis.Length < 18 && !rootThis.Contains(".") && !rootThis.Contains("-"))
+                {
+
+                    long total = 0;
 
                     for (int i = 0; i < rootThis.Length; i++)
                     {
@@ -48,12 +49,12 @@ namespace DigitalRoot
                     Console.WriteLine("Output: " + total);
                     Console.WriteLine();
                     DigitalRoot("");
-            }
-            else
-            {
-                DigitalRoot(""); 
-            }
-                
+                }
+                else
+                {
+                    DigitalRoot("");
+
+                }
 
            
             
